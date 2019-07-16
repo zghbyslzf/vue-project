@@ -1,0 +1,70 @@
+// vw布局
+@mixin vw {
+  font-size: 50px;
+  font-size: 13.3333333333333vw; // 100px
+}
+
+// 绝对定位
+@mixin absolute($top, $right, $bottom, $left) {
+  max-width: 750px;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// 圆
+@mixin round($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+// 多行文本溢出
+@mixin lineCamp($clamp: 2) {
+  text-overflow: -o - ellipsis - lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit - box;
+  -webkit-line-clamp: $clamp;
+  // /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  // /* autoprefixer: on */
+}
+
+// 背景图
+@mixin backgroundImg($url) {
+  background: $url center center no-repeat;
+  background-size: 100% 100%;
+}
+
+// 元素大小
+@mixin elementSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 绝对定位兼容水平垂直居中
+@mixin positionCenter() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+// 弹性布局水平垂直居中
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 弹性布局两边对齐
+@mixin flexSpaceBetween() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
